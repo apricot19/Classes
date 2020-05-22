@@ -1,0 +1,43 @@
+lookup = "instagram.com"
+
+
+class SearchHistory:
+    def __init__(self, newname = "None"):
+
+        self.dictionary = {"23.54.134.4": ["instagram.com", "University.edu.au"], "11.43.25.63": ["youtube.com"]}
+        print(newname)
+
+
+class Subclass(SearchHistory):
+
+    def __init__(self):
+        SearchHistory.__init__(self)
+        self.listies = ["23.54.134.4"]
+
+    def find(self, lookup):
+        for ip, name in self.dictionary.items():
+            if lookup in self.dictionary[ip] and ip in self.listies:
+                return (ip)
+        return ("Sorry, Does Not Exist")
+
+print("'U' = , 'Type 1' = Update IP, 'Type 2 = 'Look up an IP address'")
+while True:
+    u_imp = input("Enter Domain name:")
+    #
+    # while u_imp == "u" or "Type 1" or "Type 2" or "Q" or "U" or "q":
+
+    if u_imp == "u":
+        Subclass.find( )
+    elif u_imp == "Type 1":
+        print("1")
+    elif u_imp == "Type 2":
+        print("2")
+    elif u_imp == "q" or "Q":
+        quit()
+    else:
+        print("Try again")
+
+    
+    newSub = Subclass()
+    print(newSub.find(lookup))
+
